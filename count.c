@@ -126,7 +126,7 @@ void heapify(int arr[], int size, int i) {
     }
 }
 void print_array(int arr[], int size) {
-    for (int i = 0; i < size
+    for (int i = 0; i < size)
         printf("%d ", arr[i]);
     }
     printf("\n");

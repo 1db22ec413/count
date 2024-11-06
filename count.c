@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-// Function prototypes
 void quick_sort(int arr[], int low, int high);
 void selection_sort(int arr[], int size);
 void heap_sort(int arr[], int size);
@@ -12,7 +11,7 @@ void heapify(int arr[], int size, int i);
 int main() {
     int choice, arr[10];
 
-    // Getting input from the user
+    
     printf("Enter 10 numbers: ");
     for (int i = 0; i < 10; i++) {
         scanf("%d", &arr[i]);
@@ -28,7 +27,7 @@ int main() {
     printf("Original Array: ");
     print_array(arr, 10);
 
-    // Calling the chosen sorting function
+
     switch (choice) {
         case 1:
             quick_sort(arr, 0, 9);
@@ -58,7 +57,7 @@ int main() {
     }
 }
 
-// Partition function for Quick Sort
+
 int partition(int arr[], int low, int high) {
     int pivot = arr[high];
     int i = (low - 1);
@@ -77,7 +76,7 @@ int partition(int arr[], int low, int high) {
     return (i + 1);
 }
 
-// Engineer 3: Selection Sort
+
 void selection_sort(int arr[], int size) {
     for (int i = 0; i < size - 1; i++) {
         int min_idx = i;
@@ -91,20 +90,19 @@ void selection_sort(int arr[], int size) {
     }
 }
 
-// Engineer 4: Heap Sort
+
 void heap_sort(int arr[], int size) {
-    // Build max heap
+    
     for (int i = size / 2 - 1; i >= 0; i--) {
         heapify(arr, size, i);
     }
-    // Heap sort
+    
     for (int i = size - 1; i >= 0; i--) {
         int temp = arr[0];
         arr[0] = arr[i];
         arr[i] = temp;
 
-        // Heapify root element
-        heapify(arr, i, 0);
+                heapify(arr, i, 0);
     }
 }
 
